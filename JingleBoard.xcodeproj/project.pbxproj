@@ -16,15 +16,16 @@
 		502485741615F1CC0099E1AF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 502485731615F1CC0099E1AF /* Default.png */; };
 		502485761615F1CC0099E1AF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 502485751615F1CC0099E1AF /* Default@2x.png */; };
 		502485781615F1CC0099E1AF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 502485771615F1CC0099E1AF /* Default-568h@2x.png */; };
-		5024857B1615F1CC0099E1AF /* JBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024857A1615F1CC0099E1AF /* JBViewController.m */; };
-		5024857E1615F1CC0099E1AF /* JBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5024857C1615F1CC0099E1AF /* JBViewController.xib */; };
+		502485921615F4590099E1AF /* JBDrumPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502485911615F4590099E1AF /* JBDrumPadViewController.m */; };
+		D4A9D5DDE7AA4D4BA1271CB1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5F05A626B6424C9BE3C63D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D5F05A626B6424C9BE3C63D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5024855D1615F1CC0099E1AF /* JingleBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JingleBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		502485611615F1CC0099E1AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		502485631615F1CC0099E1AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		502485651615F1CC0099E1AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		502485611615F1CC0099E1AF /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		502485631615F1CC0099E1AF /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		502485651615F1CC0099E1AF /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		502485691615F1CC0099E1AF /* JingleBoard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JingleBoard-Info.plist"; sourceTree = "<group>"; };
 		5024856B1615F1CC0099E1AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5024856D1615F1CC0099E1AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -34,9 +35,9 @@
 		502485731615F1CC0099E1AF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		502485751615F1CC0099E1AF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		502485771615F1CC0099E1AF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		502485791615F1CC0099E1AF /* JBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBViewController.h; sourceTree = "<group>"; };
-		5024857A1615F1CC0099E1AF /* JBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBViewController.m; sourceTree = "<group>"; };
-		5024857D1615F1CC0099E1AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JBViewController.xib; sourceTree = "<group>"; };
+		502485901615F4590099E1AF /* JBDrumPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBDrumPadViewController.h; sourceTree = "<group>"; };
+		502485911615F4590099E1AF /* JBDrumPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBDrumPadViewController.m; sourceTree = "<group>"; };
+		6BDA59C976DF457385E0B297 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +48,7 @@
 				502485621615F1CC0099E1AF /* UIKit.framework in Frameworks */,
 				502485641615F1CC0099E1AF /* Foundation.framework in Frameworks */,
 				502485661615F1CC0099E1AF /* CoreGraphics.framework in Frameworks */,
+				D4A9D5DDE7AA4D4BA1271CB1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +61,7 @@
 				502485671615F1CC0099E1AF /* JingleBoard */,
 				502485601615F1CC0099E1AF /* Frameworks */,
 				5024855E1615F1CC0099E1AF /* Products */,
+				6BDA59C976DF457385E0B297 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +79,7 @@
 				502485611615F1CC0099E1AF /* UIKit.framework */,
 				502485631615F1CC0099E1AF /* Foundation.framework */,
 				502485651615F1CC0099E1AF /* CoreGraphics.framework */,
+				1D5F05A626B6424C9BE3C63D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,11 +87,10 @@
 		502485671615F1CC0099E1AF /* JingleBoard */ = {
 			isa = PBXGroup;
 			children = (
+				502485901615F4590099E1AF /* JBDrumPadViewController.h */,
+				502485911615F4590099E1AF /* JBDrumPadViewController.m */,
 				502485701615F1CC0099E1AF /* JBAppDelegate.h */,
 				502485711615F1CC0099E1AF /* JBAppDelegate.m */,
-				502485791615F1CC0099E1AF /* JBViewController.h */,
-				5024857A1615F1CC0099E1AF /* JBViewController.m */,
-				5024857C1615F1CC0099E1AF /* JBViewController.xib */,
 				502485681615F1CC0099E1AF /* Supporting Files */,
 			);
 			path = JingleBoard;
@@ -117,6 +120,7 @@
 				502485591615F1CC0099E1AF /* Sources */,
 				5024855A1615F1CC0099E1AF /* Frameworks */,
 				5024855B1615F1CC0099E1AF /* Resources */,
+				F6858FDE882A4356B65A66DE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,11 +167,27 @@
 				502485741615F1CC0099E1AF /* Default.png in Resources */,
 				502485761615F1CC0099E1AF /* Default@2x.png in Resources */,
 				502485781615F1CC0099E1AF /* Default-568h@2x.png in Resources */,
-				5024857E1615F1CC0099E1AF /* JBViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F6858FDE882A4356B65A66DE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		502485591615F1CC0099E1AF /* Sources */ = {
@@ -176,7 +196,7 @@
 			files = (
 				5024856E1615F1CC0099E1AF /* main.m in Sources */,
 				502485721615F1CC0099E1AF /* JBAppDelegate.m in Sources */,
-				5024857B1615F1CC0099E1AF /* JBViewController.m in Sources */,
+				502485921615F4590099E1AF /* JBDrumPadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,14 +209,6 @@
 				5024856B1615F1CC0099E1AF /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5024857C1615F1CC0099E1AF /* JBViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5024857D1615F1CC0099E1AF /* en */,
-			);
-			name = JBViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -255,6 +267,7 @@
 		};
 		502485821615F1CC0099E1AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BDA59C976DF457385E0B297 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JingleBoard/JingleBoard-Prefix.pch";
@@ -266,6 +279,7 @@
 		};
 		502485831615F1CC0099E1AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BDA59C976DF457385E0B297 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JingleBoard/JingleBoard-Prefix.pch";
@@ -294,6 +308,7 @@
 				502485831615F1CC0099E1AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

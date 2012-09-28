@@ -1,5 +1,5 @@
 //
-//  JBViewController.h
+//  JBDrumPad.h
 //  JingleBoard
 //
 //  Created by Max Winde on 28.09.12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JBViewController : UIViewController
+@interface JBDrumPadViewController : UIViewController
 
 @end

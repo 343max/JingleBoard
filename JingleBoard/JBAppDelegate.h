@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class JBViewController;
-
 @interface JBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) JBViewController *viewController;
+@property (strong, nonatomic) UINavigationController *viewController;
 
 @end
