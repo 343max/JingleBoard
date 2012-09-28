@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		502485621615F1CC0099E1AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502485611615F1CC0099E1AF /* UIKit.framework */; };
+		502485641615F1CC0099E1AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502485631615F1CC0099E1AF /* Foundation.framework */; };
+		502485661615F1CC0099E1AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502485651615F1CC0099E1AF /* CoreGraphics.framework */; };
+		5024856C1615F1CC0099E1AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5024856A1615F1CC0099E1AF /* InfoPlist.strings */; };
+		5024856E1615F1CC0099E1AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024856D1615F1CC0099E1AF /* main.m */; };
+		502485721615F1CC0099E1AF /* JBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 502485711615F1CC0099E1AF /* JBAppDelegate.m */; };
+		502485741615F1CC0099E1AF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 502485731615F1CC0099E1AF /* Default.png */; };
+		502485761615F1CC0099E1AF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 502485751615F1CC0099E1AF /* Default@2x.png */; };
+		502485781615F1CC0099E1AF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 502485771615F1CC0099E1AF /* Default-568h@2x.png */; };
+		5024857B1615F1CC0099E1AF /* JBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024857A1615F1CC0099E1AF /* JBViewController.m */; };
+		5024857E1615F1CC0099E1AF /* JBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5024857C1615F1CC0099E1AF /* JBViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5024855D1615F1CC0099E1AF /* JingleBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JingleBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		502485611615F1CC0099E1AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		502485631615F1CC0099E1AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		502485651615F1CC0099E1AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		502485691615F1CC0099E1AF /* JingleBoard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JingleBoard-Info.plist"; sourceTree = "<group>"; };
+		5024856B1615F1CC0099E1AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5024856D1615F1CC0099E1AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5024856F1615F1CC0099E1AF /* JingleBoard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JingleBoard-Prefix.pch"; sourceTree = "<group>"; };
+		502485701615F1CC0099E1AF /* JBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBAppDelegate.h; sourceTree = "<group>"; };
+		502485711615F1CC0099E1AF /* JBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBAppDelegate.m; sourceTree = "<group>"; };
+		502485731615F1CC0099E1AF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		502485751615F1CC0099E1AF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		502485771615F1CC0099E1AF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		502485791615F1CC0099E1AF /* JBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBViewController.h; sourceTree = "<group>"; };
+		5024857A1615F1CC0099E1AF /* JBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBViewController.m; sourceTree = "<group>"; };
+		5024857D1615F1CC0099E1AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JBViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5024855A1615F1CC0099E1AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				502485621615F1CC0099E1AF /* UIKit.framework in Frameworks */,
+				502485641615F1CC0099E1AF /* Foundation.framework in Frameworks */,
+				502485661615F1CC0099E1AF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		502485521615F1CC0099E1AF = {
+			isa = PBXGroup;
+			children = (
+				502485671615F1CC0099E1AF /* JingleBoard */,
+				502485601615F1CC0099E1AF /* Frameworks */,
+				5024855E1615F1CC0099E1AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5024855E1615F1CC0099E1AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5024855D1615F1CC0099E1AF /* JingleBoard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		502485601615F1CC0099E1AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				502485611615F1CC0099E1AF /* UIKit.framework */,
+				502485631615F1CC0099E1AF /* Foundation.framework */,
+				502485651615F1CC0099E1AF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		502485671615F1CC0099E1AF /* JingleBoard */ = {
+			isa = PBXGroup;
+			children = (
+				502485701615F1CC0099E1AF /* JBAppDelegate.h */,
+				502485711615F1CC0099E1AF /* JBAppDelegate.m */,
+				502485791615F1CC0099E1AF /* JBViewController.h */,
+				5024857A1615F1CC0099E1AF /* JBViewController.m */,
+				5024857C1615F1CC0099E1AF /* JBViewController.xib */,
+				502485681615F1CC0099E1AF /* Supporting Files */,
+			);
+			path = JingleBoard;
+			sourceTree = "<group>";
+		};
+		502485681615F1CC0099E1AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				502485691615F1CC0099E1AF /* JingleBoard-Info.plist */,
+				5024856A1615F1CC0099E1AF /* InfoPlist.strings */,
+				5024856D1615F1CC0099E1AF /* main.m */,
+				5024856F1615F1CC0099E1AF /* JingleBoard-Prefix.pch */,
+				502485731615F1CC0099E1AF /* Default.png */,
+				502485751615F1CC0099E1AF /* Default@2x.png */,
+				502485771615F1CC0099E1AF /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5024855C1615F1CC0099E1AF /* JingleBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 502485811615F1CC0099E1AF /* Build configuration list for PBXNativeTarget "JingleBoard" */;
+			buildPhases = (
+				502485591615F1CC0099E1AF /* Sources */,
+				5024855A1615F1CC0099E1AF /* Frameworks */,
+				5024855B1615F1CC0099E1AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JingleBoard;
+			productName = JingleBoard;
+			productReference = 5024855D1615F1CC0099E1AF /* JingleBoard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		502485541615F1CC0099E1AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JB;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Max Winde";
+			};
+			buildConfigurationList = 502485571615F1CC0099E1AF /* Build configuration list for PBXProject "JingleBoard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 502485521615F1CC0099E1AF;
+			productRefGroup = 5024855E1615F1CC0099E1AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5024855C1615F1CC0099E1AF /* JingleBoard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5024855B1615F1CC0099E1AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5024856C1615F1CC0099E1AF /* InfoPlist.strings in Resources */,
+				502485741615F1CC0099E1AF /* Default.png in Resources */,
+				502485761615F1CC0099E1AF /* Default@2x.png in Resources */,
+				502485781615F1CC0099E1AF /* Default-568h@2x.png in Resources */,
+				5024857E1615F1CC0099E1AF /* JBViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		502485591615F1CC0099E1AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5024856E1615F1CC0099E1AF /* main.m in Sources */,
+				502485721615F1CC0099E1AF /* JBAppDelegate.m in Sources */,
+				5024857B1615F1CC0099E1AF /* JBViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5024856A1615F1CC0099E1AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5024856B1615F1CC0099E1AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5024857C1615F1CC0099E1AF /* JBViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5024857D1615F1CC0099E1AF /* en */,
+			);
+			name = JBViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5024857F1615F1CC0099E1AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		502485801615F1CC0099E1AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		502485821615F1CC0099E1AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JingleBoard/JingleBoard-Prefix.pch";
+				INFOPLIST_FILE = "JingleBoard/JingleBoard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		502485831615F1CC0099E1AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JingleBoard/JingleBoard-Prefix.pch";
+				INFOPLIST_FILE = "JingleBoard/JingleBoard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		502485571615F1CC0099E1AF /* Build configuration list for PBXProject "JingleBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5024857F1615F1CC0099E1AF /* Debug */,
+				502485801615F1CC0099E1AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		502485811615F1CC0099E1AF /* Build configuration list for PBXNativeTarget "JingleBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				502485821615F1CC0099E1AF /* Debug */,
+				502485831615F1CC0099E1AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 502485541615F1CC0099E1AF /* Project object */;
+}
