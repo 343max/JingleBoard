@@ -8,6 +8,7 @@
 
 #import "JBDrumPadViewController.h"
 #import "JBCellContent.h"
+#import "JBCellContentEditorViewController.h"
 #import "JBJingleCell.h"
 
 @interface JBDrumPadViewController ()
@@ -137,7 +138,10 @@
     NSLog(@"selected Cell %i", indexPath.row);
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CellContentEditor" bundle:nil];
-    self.cellEditorPopoverController = [[UIPopoverController alloc] initWithContentViewController:[storyboard instantiateInitialViewController]];
+    JBCellContentEditorViewController *viewController = [storyboard instantiateInitialViewController];
+    viewController.content = self.sounds[indexPath.row];
+    
+    self.cellEditorPopoverController = [[UIPopoverController alloc] initWithContentViewController:viewController];
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     [self.cellEditorPopoverController presentPopoverFromRect:cell.bounds
                                                       inView:cell.contentView
