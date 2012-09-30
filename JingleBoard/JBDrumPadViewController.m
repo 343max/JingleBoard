@@ -27,9 +27,6 @@
     
     if (self) {
         self.sounds = [[NSMutableArray alloc] initWithCapacity:8 * 6];
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                                                                                               target:self
-                                                                                               action:@selector(toggleEditMode:)];
     }
     
     return self;
@@ -37,6 +34,8 @@
 
 - (void)viewDidLoad;
 {
+    self.editMode = NO;
+
     [self.collectionView registerClass:[JBJingleCell class]
        forCellWithReuseIdentifier:@"JingleCell"];
 
@@ -66,11 +65,19 @@
 
 - (void)setEditMode:(BOOL)editMode;
 {
-    if (editMode == _editMode) {
-        return;
-    }
-    
     _editMode = editMode;
+    
+    UIBarButtonItem *toggleButton;
+    if (!editMode) {
+        toggleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                                                     target:self
+                                                                     action:@selector(toggleEditMode:)];
+    } else {
+        toggleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                     target:self
+                                                                     action:@selector(toggleEditMode:)];
+    }
+    [self.navigationItem setRightBarButtonItem:toggleButton animated:NO];
     
     for (JBJingleCell *cell in self.collectionView.visibleCells) {
         cell.editMode = editMode;
