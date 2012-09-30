@@ -14,6 +14,8 @@
 
 @property (weak) UIView *editView;
 
+- (void)contentDidChange:(NSNotification *)notification;
+
 @end
 
 
@@ -49,15 +51,38 @@
     return self;
 }
 
+- (void)dealloc;
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)setContent:(JBCellContent *)content;
 {
     if (content == _content) {
         return;
     }
     
+    if (_content) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:JBCellContentDidChangeNotification
+                                                      object:_content];
+    }
+    
     _content = content;
     
-    self.textLabel.text = content.label;
+    if (_content) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(contentDidChange:)
+                                                     name:JBCellContentDidChangeNotification
+                                                   object:_content];
+    }
+    
+    [self contentDidChange:nil];
+}
+
+- (void)contentDidChange:(NSNotification *)notification;
+{
+    self.textLabel.text = self.content.label;
 }
 
 - (void)setEditMode:(BOOL)editMode;

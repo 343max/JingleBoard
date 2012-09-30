@@ -10,7 +10,7 @@
 
 @class JBCellContent;
 
-@interface JBCellContentEditorViewController : UITableViewController
+@interface JBCellContentEditorViewController : UITableViewController <UITextFieldDelegate>
 
 @property (weak) IBOutlet UITextField *labelTextField;
 

@@ -8,6 +8,27 @@
 
 #import "JBCellContent.h"
 
+NSString * const JBCellContentDidChangeNotification = @"JBCellContentDidChangeNotification";
+
+@interface JBCellContent ()
+
+- (void)postContentDidChangeNotification;
+
+@end
+
+
 @implementation JBCellContent
+
+- (void)postContentDidChangeNotification;
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:JBCellContentDidChangeNotification
+                                                        object:self];
+}
+
+- (void)setLabel:(NSString *)label;
+{
+    _label = label;
+    [self postContentDidChangeNotification];
+}
 
 @end

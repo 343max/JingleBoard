@@ -15,11 +15,33 @@
 
 @implementation JBCellContentEditorViewController
 
+- (void)viewDidLoad;
+{
+    [super viewDidLoad];
+    
+    self.labelTextField.delegate = self;
+}
+
 - (void)viewWillAppear:(BOOL)animated;
 {
     [super viewWillAppear:animated];
     
     self.labelTextField.text = self.content.label;
+}
+
+
+#pragma mark UITextFieldDelegate
+
+- (void)textFieldDidEndEditing:(UITextField *)textField;
+{
+    self.content.label = self.labelTextField.text;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
+{
+    self.content.label = self.labelTextField.text;
+    [self.labelTextField resignFirstResponder];
+    return YES;
 }
 
 @end

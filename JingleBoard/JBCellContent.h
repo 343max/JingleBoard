@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const JBCellContentDidChangeNotification;
+
 @interface JBCellContent : NSObject
 
 @property (strong, nonatomic) NSString *label;
