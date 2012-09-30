@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Max Winde. All rights reserved.
 //
 
+#import "UIViewController+JBCellEditorViewController.h"
 #import "JBCellContent.h"
 #import "JBCellContentEditorViewController.h"
 

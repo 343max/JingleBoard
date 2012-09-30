@@ -91,7 +91,6 @@
 {
     [super layoutSubviews];
     
-    NSLog(@"isEmpty: %i", self.content.isEmpty);
     self.editView.hidden = !self.editMode || !self.content.isEmpty;
 }
 

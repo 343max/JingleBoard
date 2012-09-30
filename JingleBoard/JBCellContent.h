@@ -15,5 +15,6 @@ extern NSString * const JBCellContentDidChangeNotification;
 @property (assign, nonatomic, readonly) BOOL isEmpty;
 
 @property (strong, nonatomic) NSString *label;
+@property (strong, nonatomic) NSURL *jingleFileURL;
 
 @end

@@ -14,6 +14,4 @@
 
 @property (weak) IBOutlet UITextField *labelTextField;
 
-@property (strong) JBCellContent *content;
-
 @end

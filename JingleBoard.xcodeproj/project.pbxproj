@@ -11,6 +11,9 @@
 		50240BE616186B0500A03C5C /* CellContentEditor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50240BE516186B0500A03C5C /* CellContentEditor.storyboard */; };
 		50240BED16186F0E00A03C5C /* JBCellContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 50240BEC16186F0E00A03C5C /* JBCellContent.m */; };
 		50240BF21618711B00A03C5C /* JBCellContentEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50240BF11618711B00A03C5C /* JBCellContentEditorViewController.m */; };
+		50240C0216187CE600A03C5C /* JBCellContentEditorNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50240C0116187CE600A03C5C /* JBCellContentEditorNavigationController.m */; };
+		50240C0616187DA200A03C5C /* UIViewController+JBCellEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50240C0516187DA200A03C5C /* UIViewController+JBCellEditorViewController.m */; };
+		50240C0916187E8500A03C5C /* JBJingleChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50240C0816187E8500A03C5C /* JBJingleChooserViewController.m */; };
 		502485621615F1CC0099E1AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502485611615F1CC0099E1AF /* UIKit.framework */; };
 		502485641615F1CC0099E1AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502485631615F1CC0099E1AF /* Foundation.framework */; };
 		502485661615F1CC0099E1AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502485651615F1CC0099E1AF /* CoreGraphics.framework */; };
@@ -34,6 +37,12 @@
 		50240BEC16186F0E00A03C5C /* JBCellContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBCellContent.m; sourceTree = "<group>"; };
 		50240BF01618711B00A03C5C /* JBCellContentEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBCellContentEditorViewController.h; sourceTree = "<group>"; };
 		50240BF11618711B00A03C5C /* JBCellContentEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBCellContentEditorViewController.m; sourceTree = "<group>"; };
+		50240C0016187CE600A03C5C /* JBCellContentEditorNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBCellContentEditorNavigationController.h; sourceTree = "<group>"; };
+		50240C0116187CE600A03C5C /* JBCellContentEditorNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBCellContentEditorNavigationController.m; sourceTree = "<group>"; };
+		50240C0416187DA200A03C5C /* UIViewController+JBCellEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JBCellEditorViewController.h"; sourceTree = "<group>"; };
+		50240C0516187DA200A03C5C /* UIViewController+JBCellEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JBCellEditorViewController.m"; sourceTree = "<group>"; };
+		50240C0716187E8500A03C5C /* JBJingleChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBJingleChooserViewController.h; sourceTree = "<group>"; };
+		50240C0816187E8500A03C5C /* JBJingleChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBJingleChooserViewController.m; sourceTree = "<group>"; };
 		5024855D1615F1CC0099E1AF /* JingleBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JingleBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		502485611615F1CC0099E1AF /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		502485631615F1CC0099E1AF /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,6 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50240C0316187D7C00A03C5C /* Cell Editor */ = {
+			isa = PBXGroup;
+			children = (
+				50240BE516186B0500A03C5C /* CellContentEditor.storyboard */,
+				50240BF01618711B00A03C5C /* JBCellContentEditorViewController.h */,
+				50240BF11618711B00A03C5C /* JBCellContentEditorViewController.m */,
+				50240C0016187CE600A03C5C /* JBCellContentEditorNavigationController.h */,
+				50240C0116187CE600A03C5C /* JBCellContentEditorNavigationController.m */,
+				50240C0416187DA200A03C5C /* UIViewController+JBCellEditorViewController.h */,
+				50240C0516187DA200A03C5C /* UIViewController+JBCellEditorViewController.m */,
+				50240C0716187E8500A03C5C /* JBJingleChooserViewController.h */,
+				50240C0816187E8500A03C5C /* JBJingleChooserViewController.m */,
+			);
+			name = "Cell Editor";
+			sourceTree = "<group>";
+		};
 		502485521615F1CC0099E1AF = {
 			isa = PBXGroup;
 			children = (
@@ -110,11 +135,9 @@
 				502485A61616FA230099E1AF /* JBJingleCell.m */,
 				50240BE1161855AC00A03C5C /* JBDottedBox.h */,
 				50240BE2161855AC00A03C5C /* JBDottedBox.m */,
-				50240BE516186B0500A03C5C /* CellContentEditor.storyboard */,
 				50240BEB16186F0E00A03C5C /* JBCellContent.h */,
 				50240BEC16186F0E00A03C5C /* JBCellContent.m */,
-				50240BF01618711B00A03C5C /* JBCellContentEditorViewController.h */,
-				50240BF11618711B00A03C5C /* JBCellContentEditorViewController.m */,
+				50240C0316187D7C00A03C5C /* Cell Editor */,
 			);
 			path = JingleBoard;
 			sourceTree = "<group>";
@@ -225,6 +248,9 @@
 				50240BE3161855AC00A03C5C /* JBDottedBox.m in Sources */,
 				50240BED16186F0E00A03C5C /* JBCellContent.m in Sources */,
 				50240BF21618711B00A03C5C /* JBCellContentEditorViewController.m in Sources */,
+				50240C0216187CE600A03C5C /* JBCellContentEditorNavigationController.m in Sources */,
+				50240C0616187DA200A03C5C /* UIViewController+JBCellEditorViewController.m in Sources */,
+				50240C0916187E8500A03C5C /* JBJingleChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

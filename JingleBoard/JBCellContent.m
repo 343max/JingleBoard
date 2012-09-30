@@ -40,4 +40,10 @@ NSString * const JBCellContentDidChangeNotification = @"JBCellContentDidChangeNo
     [self postContentDidChangeNotification];
 }
 
+- (void)setJingleFileURL:(NSURL *)jingleFileURL;
+{
+    _jingleFileURL = jingleFileURL;
+    [self postContentDidChangeNotification];
+}
+
 @end
