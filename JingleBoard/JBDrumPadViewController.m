@@ -57,12 +57,9 @@
     CGSize itemSize = self.view.bounds.size;
     itemSize.width /= 8.0;
     itemSize.height /= 6.0;
-//    itemSize = CGSizeMake(60, 50);
-    NSLog(@"itemSize: %@", NSStringFromCGSize(itemSize));
     flowLayout.itemSize = itemSize;
     flowLayout.minimumInteritemSpacing = 0.0;
     flowLayout.minimumLineSpacing = 0.0;
-//    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 }
 
 - (void)toggleEditMode:(id)sender;
@@ -140,7 +137,9 @@
     JBCellContentEditorViewController *viewController = [storyboard instantiateInitialViewController];
     viewController.content = self.sounds[indexPath.row];
     
-    self.cellEditorPopoverController = [[UIPopoverController alloc] initWithContentViewController:viewController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    self.cellEditorPopoverController = [[UIPopoverController alloc] initWithContentViewController:navigationController];
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     [self.cellEditorPopoverController presentPopoverFromRect:cell.bounds
                                                       inView:cell.contentView

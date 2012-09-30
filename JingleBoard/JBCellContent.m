@@ -25,8 +25,17 @@ NSString * const JBCellContentDidChangeNotification = @"JBCellContentDidChangeNo
                                                         object:self];
 }
 
+- (BOOL)isEmpty;
+{
+    return self.label == nil;
+}
+
 - (void)setLabel:(NSString *)label;
 {
+    if ([label isEqualToString:@""]) {
+        label = nil;
+    }
+    
     _label = label;
     [self postContentDidChangeNotification];
 }

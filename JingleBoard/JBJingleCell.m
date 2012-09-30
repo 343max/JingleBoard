@@ -83,6 +83,16 @@
 - (void)contentDidChange:(NSNotification *)notification;
 {
     self.textLabel.text = self.content.label;
+    
+    [self setNeedsLayout];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    NSLog(@"isEmpty: %i", self.content.isEmpty);
+    self.editView.hidden = !self.editMode || !self.content.isEmpty;
 }
 
 - (void)setEditMode:(BOOL)editMode;
@@ -93,7 +103,7 @@
     
     _editMode = editMode;
     
-    self.editView.hidden = !editMode;
+    [self setNeedsLayout];
 }
 
 @end

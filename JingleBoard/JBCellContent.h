@@ -12,6 +12,8 @@ extern NSString * const JBCellContentDidChangeNotification;
 
 @interface JBCellContent : NSObject
 
+@property (assign, nonatomic, readonly) BOOL isEmpty;
+
 @property (strong, nonatomic) NSString *label;
 
 @end
