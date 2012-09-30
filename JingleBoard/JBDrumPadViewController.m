@@ -32,7 +32,6 @@
         _sounds = [[NSMutableArray alloc] initWithCapacity:8 * 6];
         for(NSInteger i = 0; i < 6 * 8; i++) {
             JBCellContent *content = [[JBCellContent alloc] init];
-            content.label = [NSString stringWithFormat:@"Cell %i", i];
             _sounds[i] = content;
         }
     }
