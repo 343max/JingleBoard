@@ -7,12 +7,14 @@
 //
 
 #import "JBDrumPadViewController.h"
+#import "JBCellContent.h"
 #import "JBJingleCell.h"
 
 @interface JBDrumPadViewController ()
 
 @property (strong) NSMutableArray *sounds;
 @property (assign, nonatomic) BOOL editMode;
+@property (strong, nonatomic) UIPopoverController *cellEditorPopoverController;
 
 - (void)toggleEditMode:(id)sender;
 
@@ -26,7 +28,12 @@
     self = [super initWithCollectionViewLayout:layout];
     
     if (self) {
-        self.sounds = [[NSMutableArray alloc] initWithCapacity:8 * 6];
+        _sounds = [[NSMutableArray alloc] initWithCapacity:8 * 6];
+        for(NSInteger i = 0; i < 6 * 8; i++) {
+            JBCellContent *content = [[JBCellContent alloc] init];
+            content.label = [NSString stringWithFormat:@"Cell %i", i];
+            _sounds[i] = content;
+        }
     }
     
     return self;
@@ -86,6 +93,18 @@
     }
 }
 
+- (void)setCellEditorPopoverController:(UIPopoverController *)cellEditorPopoverController;
+{
+    if (_cellEditorPopoverController == cellEditorPopoverController) {
+        return;
+    }
+    
+    if (_cellEditorPopoverController) {
+        [_cellEditorPopoverController dismissPopoverAnimated:YES];
+    }
+    
+    _cellEditorPopoverController = cellEditorPopoverController;
+}
 
 #pragma mark UICollectionViewDataSource
 
@@ -104,7 +123,7 @@
     JBJingleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JingleCell"
                                                                    forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"s%ir%i", indexPath.section, indexPath.row];
+    cell.content = self.sounds[indexPath.row];
     cell.editMode = self.editMode;
     
     return cell;
@@ -116,6 +135,14 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
 {
     NSLog(@"selected Cell %i", indexPath.row);
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CellContentEditor" bundle:nil];
+    self.cellEditorPopoverController = [[UIPopoverController alloc] initWithContentViewController:[storyboard instantiateInitialViewController]];
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    [self.cellEditorPopoverController presentPopoverFromRect:cell.bounds
+                                                      inView:cell.contentView
+                                    permittedArrowDirections:UIPopoverArrowDirectionAny
+                                                    animated:YES];
 }
 
 @end

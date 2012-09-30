@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Max Winde. All rights reserved.
 //
 
+#import "JBCellContent.h"
 #import "JBDottedBox.h"
 #import "JBJingleCell.h"
 
@@ -36,6 +37,7 @@
         UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectInset(self.bounds, 1.0, 1.0)];
         textLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         textLabel.backgroundColor = [UIColor clearColor];
+        textLabel.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:textLabel];
         _textLabel = textLabel;
         
@@ -45,6 +47,17 @@
     }
     
     return self;
+}
+
+- (void)setContent:(JBCellContent *)content;
+{
+    if (content == _content) {
+        return;
+    }
+    
+    _content = content;
+    
+    self.textLabel.text = content.label;
 }
 
 - (void)setEditMode:(BOOL)editMode;

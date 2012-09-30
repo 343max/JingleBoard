@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		50240BE3161855AC00A03C5C /* JBDottedBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 50240BE2161855AC00A03C5C /* JBDottedBox.m */; };
+		50240BE616186B0500A03C5C /* CellContentEditor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50240BE516186B0500A03C5C /* CellContentEditor.storyboard */; };
+		50240BED16186F0E00A03C5C /* JBCellContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 50240BEC16186F0E00A03C5C /* JBCellContent.m */; };
 		502485621615F1CC0099E1AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502485611615F1CC0099E1AF /* UIKit.framework */; };
 		502485641615F1CC0099E1AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502485631615F1CC0099E1AF /* Foundation.framework */; };
 		502485661615F1CC0099E1AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502485651615F1CC0099E1AF /* CoreGraphics.framework */; };
@@ -26,6 +28,9 @@
 		1D5F05A626B6424C9BE3C63D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		50240BE1161855AC00A03C5C /* JBDottedBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBDottedBox.h; sourceTree = "<group>"; };
 		50240BE2161855AC00A03C5C /* JBDottedBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBDottedBox.m; sourceTree = "<group>"; };
+		50240BE516186B0500A03C5C /* CellContentEditor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CellContentEditor.storyboard; sourceTree = "<group>"; };
+		50240BEB16186F0E00A03C5C /* JBCellContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBCellContent.h; sourceTree = "<group>"; };
+		50240BEC16186F0E00A03C5C /* JBCellContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBCellContent.m; sourceTree = "<group>"; };
 		5024855D1615F1CC0099E1AF /* JingleBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JingleBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		502485611615F1CC0099E1AF /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		502485631615F1CC0099E1AF /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,6 +107,9 @@
 				502485A61616FA230099E1AF /* JBJingleCell.m */,
 				50240BE1161855AC00A03C5C /* JBDottedBox.h */,
 				50240BE2161855AC00A03C5C /* JBDottedBox.m */,
+				50240BE516186B0500A03C5C /* CellContentEditor.storyboard */,
+				50240BEB16186F0E00A03C5C /* JBCellContent.h */,
+				50240BEC16186F0E00A03C5C /* JBCellContent.m */,
 			);
 			path = JingleBoard;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 				502485741615F1CC0099E1AF /* Default.png in Resources */,
 				502485761615F1CC0099E1AF /* Default@2x.png in Resources */,
 				502485781615F1CC0099E1AF /* Default-568h@2x.png in Resources */,
+				50240BE616186B0500A03C5C /* CellContentEditor.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +218,7 @@
 				502485A41615FB690099E1AF /* JBDrumPadViewController.m in Sources */,
 				502485A71616FA230099E1AF /* JBJingleCell.m in Sources */,
 				50240BE3161855AC00A03C5C /* JBDottedBox.m in Sources */,
+				50240BED16186F0E00A03C5C /* JBCellContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
