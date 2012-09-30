@@ -22,8 +22,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    JBDrumPadViewController *viewController = [[JBDrumPadViewController alloc] initWithNibName:nil
-                                                                                        bundle:nil];
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    JBDrumPadViewController *viewController = [[JBDrumPadViewController alloc] initWithCollectionViewLayout:flowLayout];
     
     self.viewController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = self.viewController;
