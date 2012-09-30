@@ -40,7 +40,7 @@
        forCellWithReuseIdentifier:@"JingleCell"];
 
     self.collectionView.dataSource = self;
-//    self.collectionView.delegate = self;
+    self.collectionView.delegate = self;
     self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
@@ -79,10 +79,13 @@
     }
     [self.navigationItem setRightBarButtonItem:toggleButton animated:NO];
     
+    self.collectionView.allowsSelection = editMode;
+    
     for (JBJingleCell *cell in self.collectionView.visibleCells) {
         cell.editMode = editMode;
     }
 }
+
 
 #pragma mark UICollectionViewDataSource
 
@@ -105,6 +108,14 @@
     cell.editMode = self.editMode;
     
     return cell;
+}
+
+
+#pragma mark UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
+{
+    NSLog(@"selected Cell %i", indexPath.row);
 }
 
 @end

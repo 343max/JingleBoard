@@ -23,14 +23,12 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        self.contentView.backgroundColor = [UIColor whiteColor];
-        
         JBDottedBox *editView = [[JBDottedBox alloc] initWithFrame:CGRectInset(self.bounds, 4.0, 4.0)];
         editView.strokeColor = [UIColor colorWithWhite:0.842 alpha:1.000];
         editView.lineWidth = 4.0;
         editView.cornerRadius = 8.0;
         editView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        editView.backgroundColor = [UIColor whiteColor];
+        editView.backgroundColor = [UIColor clearColor];
         editView.hidden = YES;
         [self.contentView addSubview:editView];
         _editView = editView;
@@ -40,6 +38,10 @@
         textLabel.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:textLabel];
         _textLabel = textLabel;
+        
+        self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.bounds];
+        self.selectedBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        self.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
     }
     
     return self;
