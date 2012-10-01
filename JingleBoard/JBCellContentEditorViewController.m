@@ -28,6 +28,11 @@
     [super viewWillAppear:animated];
     
     self.labelTextField.text = self.content.label;
+    if (self.content.jingleFileURL == nil) {
+        self.selectSoundCell.detailTextLabel.text = @"None";
+    } else {
+        self.selectSoundCell.detailTextLabel.text = [self.content.jingleFileURL lastPathComponent];
+    }
 }
 
 

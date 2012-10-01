@@ -13,5 +13,6 @@
 @interface JBCellContentEditorViewController : UITableViewController <UITextFieldDelegate>
 
 @property (weak) IBOutlet UITextField *labelTextField;
+@property (weak) IBOutlet UITableViewCell *selectSoundCell;
 
 @end
