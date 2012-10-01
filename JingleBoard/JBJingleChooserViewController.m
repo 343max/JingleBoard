@@ -24,6 +24,21 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
+- (void)viewWillAppear:(BOOL)animated;
+{
+    [super viewWillAppear:animated];
+    
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSMutableArray *files = [[NSMutableArray alloc] init];
+    for (NSString *fileName in [[NSFileManager defaultManager] enumeratorAtPath:documentsPath]) {
+        NSURL *URL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", documentsPath, fileName]];
+        [files addObject:URL];
+    }
+    
+    self.files = [files copy];
+}
+
 #pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
@@ -33,7 +48,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    return 1;
+    return 1 + self.files.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
@@ -45,6 +60,13 @@
         cell.accessoryType = (hasCheckmark ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);
         
         return cell;
+    } else {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+        NSURL *fileURL = self.files[indexPath.row - 1];
+        cell.textLabel.text = [fileURL lastPathComponent];
+        BOOL hasCheckmark = [self.content.jingleFileURL isEqual:fileURL];
+        cell.accessoryType = (hasCheckmark ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone);
+        return cell;
     }
 }
 
@@ -52,9 +74,21 @@
 {
     if (indexPath.row == 0) {
         self.content.jingleFileURL = nil;
+    } else {
+        self.content.jingleFileURL = self.files[indexPath.row - 1];
     }
     
-    [self.navigationController popViewControllerAnimated:YES];
+    for (UITableViewCell *cell in [tableView visibleCells]) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+    
+    int64_t delayInSeconds = 0.9;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self.navigationController popViewControllerAnimated:YES];
+    });
 }
 
 @end
