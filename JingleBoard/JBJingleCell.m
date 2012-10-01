@@ -12,7 +12,9 @@
 
 @interface JBJingleCell ()
 
+@property (weak) UILabel *textLabel;
 @property (weak) UIView *editView;
+@property (weak) UIButton *actionButton;
 
 - (void)contentDidChange:(NSNotification *)notification;
 
@@ -42,6 +44,11 @@
         textLabel.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:textLabel];
         _textLabel = textLabel;
+        
+        UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        actionButton.frame = CGRectInset(self.bounds, 4.0, 4.0);
+        [self.contentView addSubview:actionButton];
+        _actionButton = actionButton;
         
         self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.bounds];
         self.selectedBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -82,7 +89,8 @@
 
 - (void)contentDidChange:(NSNotification *)notification;
 {
-    self.textLabel.text = self.content.label;
+    self.textLabel.text = self.content.autoLabel;
+    [self.actionButton setTitle:self.content.autoLabel forState:UIControlStateNormal];
     
     [self setNeedsLayout];
 }
@@ -92,6 +100,16 @@
     [super layoutSubviews];
     
     self.editView.hidden = !self.editMode || !self.content.isEmpty;
+    self.actionButton.userInteractionEnabled = !self.editMode;
+    self.actionButton.alpha = (self.editMode ? 0.7 : 1.0);
+    
+    if (self.content.hasAction) {
+        self.actionButton.hidden = NO;
+        self.textLabel.hidden = YES;
+    } else {
+        self.actionButton.hidden = YES;
+        self.textLabel.hidden = NO;
+    }
 }
 
 - (void)setEditMode:(BOOL)editMode;

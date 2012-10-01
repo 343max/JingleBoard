@@ -25,9 +25,25 @@ NSString * const JBCellContentDidChangeNotification = @"JBCellContentDidChangeNo
                                                         object:self];
 }
 
+- (BOOL)hasAction;
+{
+    return self.jingleFileURL != nil;
+}
+
 - (BOOL)isEmpty;
 {
-    return self.label == nil;
+    return self.label == nil && !self.hasAction;
+}
+
+- (NSString *)autoLabel;
+{
+    if (self.label) {
+        return self.label;
+    } else if (self.jingleFileURL) {
+        return [self.jingleFileURL lastPathComponent];
+    } else {
+        return nil;
+    }
 }
 
 - (void)setLabel:(NSString *)label;

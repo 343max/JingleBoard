@@ -13,8 +13,10 @@ extern NSString * const JBCellContentDidChangeNotification;
 @interface JBCellContent : NSObject
 
 @property (assign, nonatomic, readonly) BOOL isEmpty;
+@property (assign, nonatomic, readonly) BOOL hasAction;
 
 @property (strong, nonatomic) NSString *label;
+@property (strong, nonatomic, readonly) NSString *autoLabel;
 @property (strong, nonatomic) NSURL *jingleFileURL;
 
 @end
