@@ -50,6 +50,14 @@
         [self.contentView addSubview:actionButton];
         _actionButton = actionButton;
         
+        for (UILabel *label in @[ textLabel, actionButton.titleLabel ]) {
+            label.font = [UIFont boldSystemFontOfSize:16];
+            label.minimumScaleFactor = 0.1;
+            label.adjustsFontSizeToFitWidth = YES;
+            label.numberOfLines = 0;
+            label.textAlignment = NSTextAlignmentCenter;
+        }
+        
         self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.bounds];
         self.selectedBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
