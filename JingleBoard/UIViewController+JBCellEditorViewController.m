@@ -12,7 +12,7 @@
 
 @implementation UIViewController (JBCellEditorViewController)
 
-- (JBCellContent *)content;
+- (JBPad *)content;
 {
     JBCellContentEditorNavigationController *navigationController = (JBCellContentEditorNavigationController *)self.navigationController;
     return navigationController.content;

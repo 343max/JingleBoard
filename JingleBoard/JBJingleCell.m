@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Max Winde. All rights reserved.
 //
 
-#import "JBCellContent.h"
+#import "JBPad.h"
 #import "JBDottedBox.h"
 #import "JBJingleCell.h"
 
@@ -72,7 +72,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)setContent:(JBCellContent *)content;
+- (void)setContent:(JBPad *)content;
 {
     if (content == _content) {
         return;

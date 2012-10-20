@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class JBCellContent;
+@class JBPad;
 
 @interface JBCellContentEditorViewController : UITableViewController <UITextFieldDelegate>
 

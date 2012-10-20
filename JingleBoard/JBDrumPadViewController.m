@@ -7,13 +7,13 @@
 //
 
 #import "JBDrumPadViewController.h"
-#import "JBCellContent.h"
+#import "JBPad.h"
 #import "JBCellContentEditorNavigationController.h"
 #import "JBJingleCell.h"
 
 @interface JBDrumPadViewController ()
 
-@property (strong) NSMutableArray *sounds;
+@property (strong) NSMutableArray *pads;
 @property (assign, nonatomic) BOOL editMode;
 @property (strong, nonatomic) UIPopoverController *cellEditorPopoverController;
 
@@ -29,10 +29,10 @@
     self = [super initWithCollectionViewLayout:layout];
     
     if (self) {
-        _sounds = [[NSMutableArray alloc] initWithCapacity:8 * 6];
+        _pads = [[NSMutableArray alloc] initWithCapacity:8 * 6];
         for(NSInteger i = 0; i < 6 * 8; i++) {
-            JBCellContent *content = [[JBCellContent alloc] init];
-            _sounds[i] = content;
+            JBPad *content = [[JBPad alloc] init];
+            _pads[i] = content;
         }
     }
     
@@ -120,7 +120,7 @@
     JBJingleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JingleCell"
                                                                    forIndexPath:indexPath];
     
-    cell.content = self.sounds[indexPath.row];
+    cell.content = self.pads[indexPath.row];
     cell.editMode = self.editMode;
     
     return cell;
@@ -137,7 +137,7 @@
     UIViewController *viewController = [storyboard instantiateInitialViewController];
     
     JBCellContentEditorNavigationController *navigationController = [[JBCellContentEditorNavigationController alloc] initWithRootViewController:viewController];
-    navigationController.content = self.sounds[indexPath.row];
+    navigationController.content = self.pads[indexPath.row];
     
     self.cellEditorPopoverController = [[UIPopoverController alloc] initWithContentViewController:navigationController];
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];

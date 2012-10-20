@@ -6,18 +6,18 @@
 //  Copyright (c) 2012 Max Winde. All rights reserved.
 //
 
-#import "JBCellContent.h"
+#import "JBPad.h"
 
 NSString * const JBCellContentDidChangeNotification = @"JBCellContentDidChangeNotification";
 
-@interface JBCellContent ()
+@interface JBPad ()
 
 - (void)postContentDidChangeNotification;
 
 @end
 
 
-@implementation JBCellContent
+@implementation JBPad
 
 - (void)postContentDidChangeNotification;
 {

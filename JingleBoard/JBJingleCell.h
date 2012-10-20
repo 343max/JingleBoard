@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class JBCellContent;
+@class JBPad;
 
 @interface JBJingleCell : UICollectionViewCell
 
 @property (assign, nonatomic) BOOL editMode;
-@property (strong, nonatomic) JBCellContent *content;
+@property (strong, nonatomic) JBPad *content;
 
 @end

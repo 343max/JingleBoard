@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class JBCellContent;
+@class JBPad;
 
 @interface JBCellContentEditorNavigationController : UINavigationController
 
-@property (strong) JBCellContent *content;
+@property (strong) JBPad *content;
 
 @end

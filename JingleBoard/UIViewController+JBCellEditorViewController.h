@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class JBCellContent;
+@class JBPad;
 
 @interface UIViewController (JBCellEditorViewController)
 
-- (JBCellContent *)content;
+- (JBPad *)content;
 
 @end

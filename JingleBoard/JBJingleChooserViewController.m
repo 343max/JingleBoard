@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+JBCellEditorViewController.h"
-#import "JBCellContent.h"
+#import "JBPad.h"
 #import "JBJingleChooserViewController.h"
 
 @interface JBJingleChooserViewController ()
