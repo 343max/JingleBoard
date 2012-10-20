@@ -47,6 +47,7 @@
         
         UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         actionButton.frame = CGRectInset(self.bounds, 4.0, 4.0);
+        actionButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self.contentView addSubview:actionButton];
         _actionButton = actionButton;
         
