@@ -31,10 +31,14 @@
     self = [super initWithCollectionViewLayout:layout];
     
     if (self) {
-        _pads = [[NSMutableArray alloc] initWithCapacity:8 * 6];
-        for(NSInteger i = 0; i < 6 * 8; i++) {
-            JBPad *content = [[JBPad alloc] init];
-            _pads[i] = content;
+        _pads = [NSKeyedUnarchiver unarchiveObjectWithFile:self.padArchiveFilename];
+
+        if (_pads == nil) {
+            _pads = [[NSMutableArray alloc] initWithCapacity:8 * 6];
+            for(NSInteger i = 0; i < 6 * 8; i++) {
+                JBPad *content = [[JBPad alloc] init];
+                _pads[i] = content;
+            }
         }
     }
     
@@ -90,8 +94,6 @@
 
 - (void)padsDidChange:(NSNotification *)notification;
 {
-    NSLog(@"save pads!");
-    
     [NSKeyedArchiver archiveRootObject:self.pads
                                 toFile:self.padArchiveFilename];
 }

@@ -65,6 +65,18 @@ NSString * const JBCellContentDidChangeNotification = @"JBCellContentDidChangeNo
 
 #pragma mark NSCoding
 
+- (id)initWithCoder:(NSCoder *)aDecoder;
+{
+    self = [super init];
+    
+    if (self) {
+        _label = [aDecoder decodeObjectForKey:@"label"];
+        _jingleFileURL = [NSURL URLWithString:[aDecoder decodeObjectForKey:@"jingleFileURL"]];
+    }
+    
+    return self;
+}
+
 - (void)encodeWithCoder:(NSCoder *)aCoder;
 {
     [aCoder encodeObject:self.label forKey:@"label"];
