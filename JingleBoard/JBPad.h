@@ -10,7 +10,7 @@
 
 extern NSString * const JBCellContentDidChangeNotification;
 
-@interface JBPad : NSObject
+@interface JBPad : NSObject <NSCoding>
 
 @property (assign, nonatomic, readonly) BOOL isEmpty;
 @property (assign, nonatomic, readonly) BOOL hasAction;

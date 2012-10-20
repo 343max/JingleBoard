@@ -16,8 +16,10 @@
 @property (strong) NSMutableArray *pads;
 @property (assign, nonatomic) BOOL editMode;
 @property (strong, nonatomic) UIPopoverController *cellEditorPopoverController;
+@property (nonatomic, readonly) NSString *padArchiveFilename;
 
 - (void)toggleEditMode:(id)sender;
+- (void)padsDidChange:(NSNotification *)notification;
 
 @end
 
@@ -51,6 +53,19 @@
     self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)viewWillAppear:(BOOL)animated;
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(padsDidChange:)
+                                                 name:JBCellContentDidChangeNotification
+                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated;
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLayoutSubviews;
 {
     UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
@@ -65,6 +80,20 @@
 - (void)toggleEditMode:(id)sender;
 {
     self.editMode = !self.editMode;
+}
+
+- (NSString *)padArchiveFilename;
+{
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    return [documentsPath stringByAppendingPathComponent:@"Pads.plist"];
+}
+
+- (void)padsDidChange:(NSNotification *)notification;
+{
+    NSLog(@"save pads!");
+    
+    [NSKeyedArchiver archiveRootObject:self.pads
+                                toFile:self.padArchiveFilename];
 }
 
 - (void)setEditMode:(BOOL)editMode;
